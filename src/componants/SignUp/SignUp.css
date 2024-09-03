@@ -1,0 +1,179 @@
+
+::placeholder{
+    align-items: center;
+    margin-left: 60px !important;
+    color: #3a3939;
+    
+    }   
+label{
+    text-align: left;
+
+}
+
+
+
+
+.signupdiv .main-sign_up_container {
+    height: 80vh;
+}
+
+.signupdiv .sign-up-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(100, 207, 136, 0.897), 0 6px 20px rgba(7, 117, 168, 0.807);
+    top: 50%;
+    left: 48%;
+    z-index: 800;
+    border-radius: 15px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #6fdaaca0,  #1f75b791);
+
+}
+
+.signupdiv .sign-up-container h3 {
+    margin: 1.5rem 0;
+    font-size: large;
+}
+
+.signupdiv .sign-up-container .input-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signupdiv .sign-up-container .input-div input {
+    width: 100%;
+    height: 40px;
+    padding: 6px 12px;
+    outline: none;
+    border: 1px solid #2c2a2a;
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.signupdiv input[type="password"] {
+    width: 100%;
+    padding: 6px 12px;
+    outline: none;
+    border: 1px solid #d0cdcd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.signupdiv .sign-up-container .input-div label {
+    font-size: small;
+}
+
+.signupdiv .sign-up-container .input-div input:focus {
+    border: 1px solid #45cb36;
+    transition: all 300ms ease;
+}
+
+.signupdiv .sign-up-button{
+    padding: 10px 8px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: medium;
+    border-radius: 6px;
+    color: #fff;
+    background: linear-gradient(90deg, #6fdaab, #5cd372, #30e475, #1c90be, #35c5e2, #1f75b7);
+    border: 1px solid #62daed8a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 1px 5px rgba(124, 120, 120, 0.19);
+}
+
+.signupdiv .sign-up-button:hover {
+    background: linear-gradient(90deg, #6fdaab, #5cd372, #30e475, #1c90be, #35c5e2, #1f75b7);
+    border: 1px solid #62daed8a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(124, 120, 120, 0.19);
+}
+
+.signupdiv .sign-up-redirect-p {
+    font-size: small;
+    width: 100%;
+    text-align: start;
+}
+
+.signupdiv .sign-up-redirect-p a {
+    text-decoration: none;
+    color: #187cff;
+}
+
+.signupdiv .sign-up-redirect-p a:hover {
+    text-decoration: underline;
+    color: #112cfa;
+}
+
+.error-paragraph {
+    position: absolute;
+    top: 0;
+    font-size: small;
+    color: red;
+}
+
+.signupdiv .forgot-pass {
+    font-size: small;
+    margin: 0.2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.signupdiv .forgot-pass:hover {
+    color: #4167dc;
+    text-decoration: underline;
+}
+
+.signupdiv label {
+    text-align: left;
+}
+
+::placeholder {
+    color: #3a3939;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    .signupdiv .sign-up-container {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .signupdiv .sign-up-container h3 {
+        margin: 1rem 0;
+        font-size: medium;
+    }
+
+    .signupdiv .sign-up-button{
+        font-size: small;
+        padding: 6px;
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .signupdiv .sign-up-container {
+        width: 95%;
+        padding: 0.5rem;
+    }
+
+    .signupdiv .sign-up-container h3 {
+        margin: 0.5rem 0;
+        font-size: small;
+    }
+
+    .signupdiv .sign-up-button{
+        font-size: small;
+        padding: 5px;
+        margin-top: 10px;
+    }
+}
