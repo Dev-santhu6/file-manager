@@ -709,7 +709,7 @@ function UpdateForm({ folderName }) {
     // Options for the main types and subtypes
     const mainTypeOptions = ['item', 'DC Circuits', 'AC Circuits'];
     const subTypeOptions = {
-        'item': ['Panel', 'Inverter'],
+        'Main Items': ['Panel', 'Inverter'],
         'DC Circuits': ['DC Combiner 1/1', 'DC Combiner 2/2', 'DC Combiner 4/4', 'DC SPD', 'DC ISOLATOR', 'Enclosor Box DC', 'DC Cable 4mm', 'MC4 Connector', 'PVC Pipe', 'Cable Tie', 'GI Clip', 'Valve Socket', 'Bend', 'L Bow 3/4"', 'PVC Joint 3/4"', 'T-Socket 3/4"', 'Earth wire 6mm'],
         'AC Circuits': ['RCCB', 'AC SPD', 'AC Isolator', 'Enclosure Box', 'Relay with Base', 'Buzzer-230V Single', 'AC Cable', 'AC Supply Cable', 'Bus Bar and Enclosure', '16mm Earth Rod', 'Earth Cable', 'Earth Cable Busbar', '2*2 Casing', 'PVC Pipe', 'Cable Tie', 'GI Clip', 'Valve Socket', 'Bend', 'L Bow', 'PVC Joint'],
 'Solar. Mounting Structure': ['Rail 66 6.2m', 'Rail 66 4.5m', 'Adjustable Tile Hook', 'Y Clamp', 'S Clamp', 'Base Unit', 'T-Clamp 40-45', 'END Clamp h33', 'Self SCrew', 'Connector Clamp', 'Lock Nut', 'Aluminum L Bar']
