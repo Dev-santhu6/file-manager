@@ -1,4 +1,4 @@
-package com.example.ecosteem;
+package com.example.app;
 
 import com.getcapacitor.BridgeActivity;
 
