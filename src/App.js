@@ -38,11 +38,12 @@ function App() {
   const handleLogin = () => {
     setIsAuthenticated(true);
   };
+  const BASE_URL = process.env.REACT_APP_API_URL;
 
   const handleLogout = async () => {
     try {
       // Send request to server to clear the cookie
-      await axios.post('http://localhost:3001/api/user/logout');
+      await axios.post(`${BASE_URL}api/user/logout`);
       
       // Clear local storage
       localStorage.clear();

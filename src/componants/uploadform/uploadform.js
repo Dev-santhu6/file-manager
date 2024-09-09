@@ -979,6 +979,10 @@ function UploadForm() {
         setEndMeterReading('');
     };
 
+
+    const BASE_URL = process.env.REACT_APP_API_URL;
+
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true); // Show loader
@@ -1012,7 +1016,7 @@ function UploadForm() {
         }
 
         try {
-            const response = await axios.post('http://localhost:3001/api/upload', formData, {
+            const response = await axios.post(`${BASE_URL}api/upload`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

@@ -364,12 +364,13 @@ function UpdateForm({ folderName }) {
     //     { name: 'Member 3', trick: 'Great with databases' },
     //     { name: 'Member 4', trick: 'UI/UX designer' },
     // ];
+    const BASE_URL = process.env.REACT_APP_API_URL;
 
     useEffect(() => {
         // Fetch existing data for the folder and pre-fill the form
         async function fetchData() {
             try {
-                const response = await axios.get(`http://localhost:3001/api/getfolder/${folderName}`);
+                const response = await axios.get(`${BASE_URL}api/getfolder/${folderName}`);
                 const data = response.data;
                 setName(data.name);
                 setDescription(data.description);
@@ -385,7 +386,7 @@ function UpdateForm({ folderName }) {
             }
         }
         fetchData();
-    }, [folderName]);
+    }, [folderName,BASE_URL]);
 
     const handleMaterialChange = (index, field, value) => {
         const newMaterial = [...material];
@@ -467,7 +468,7 @@ function UpdateForm({ folderName }) {
         }
 
         try {
-            const response = await axios.put(`http://localhost:3001/api/update/${folderName}`, formData, {
+            const response = await axios.put(`${BASE_URL}api/update/${folderName}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

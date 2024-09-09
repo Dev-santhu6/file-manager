@@ -6,11 +6,12 @@ const GetFolderForm = () => {
   const [folderName, setFolderName] = useState('');
   const [folderDetails, setFolderDetails] = useState(null);
   const [error, setError] = useState(null);
+  const BASE_URL = process.env.REACT_APP_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://localhost:3001/api/get/${folderName}`); // Adjust the URL as needed
+      const response = await axios.get(`${BASE_URL}api/get/${folderName}`); // Adjust the URL as needed
       setFolderDetails(response.data);
       setError(null);
     } catch (err) {

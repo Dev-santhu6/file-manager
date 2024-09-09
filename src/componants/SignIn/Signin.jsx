@@ -523,6 +523,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function Login({ onLogin }) {
     const [signInDetails, setsignInDetails] = useState({ email: "", password: "", name: "" });
     const [error, setError] = useState("");
+    const Base_URL = "https://file-manager-server.vercel.app/"
 
     const handleOnChange = ({ currentTarget: input }) => {
         setsignInDetails({ ...signInDetails, [input.name]: input.value });
@@ -531,7 +532,7 @@ function Login({ onLogin }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = 'http://localhost:3001/api/login';
+            const url = `${Base_URL}api/login`;
             const response = await axios.post(url, signInDetails, {
                 headers: {
                     'Content-Type': 'application/json',
