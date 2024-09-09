@@ -3,7 +3,7 @@ import "./SignUp.css";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 
-const SignUp = () => {
+const SignUp = async () => {
     const [userDetails, setuserDetails] = useState({name:"", email: "", password: "",confirm_password:"" });
 	const [error, setError] = useState("");
     const BASE_URL = process.env.REACT_APP_API_URL;
