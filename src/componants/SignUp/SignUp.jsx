@@ -6,7 +6,7 @@ import axios from 'axios';
 const SignUp = () => {
     const [userDetails, setuserDetails] = useState({name:"", email: "", password: "",confirm_password:"" });
 	const [error, setError] = useState("");
-const Base_URL = "https://file-manager-server.vercel.app/"
+    const BASE_URL = process.env.REACT_APP_API_URL;
 	const handleOnchange = ({ currentTarget: input }) => {
 		setuserDetails({ ...userDetails, [input.name]: input.value });
 	};
@@ -24,7 +24,7 @@ const Base_URL = "https://file-manager-server.vercel.app/"
             return;
         }
 		try {
-			const url = `${Base_URL}api/user/register`;
+			const url = `${BASE_URL}api/user/register`;
 			const { data } = await axios.post(url, userDetails);
             console.log(data);
 			// localStorage.setItem("userinfo", JSON.stringify(userDetails.name));
