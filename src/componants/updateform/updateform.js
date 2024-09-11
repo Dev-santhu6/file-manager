@@ -544,7 +544,7 @@ function UpdateForm({ folderName }) {
 
                             {mat.mainType && mat.mainType !== 'Others' && (
                                 <div>
-                                    <label>Sub Types:</label>
+                                    <br/>
                                     {subTypeOptions[mat.mainType].map((subType) => (
                                         <div key={subType}>
                                             <input
@@ -571,19 +571,19 @@ function UpdateForm({ folderName }) {
                             )}
 
                             <div className="form-group">
-                                <label>Why Choose This Material?</label>
                                 <input
                                     type="text"
                                     value={mat.whyChoose}
+                                    placeholder='Model'
                                     onChange={(e) => handleMaterialChange(index, 'whyChoose', e.target.value)}
                                 />
                             </div>
 
                             <div className="form-group">
-                                <label>Model Number:</label>
                                 <input
                                     type="text"
                                     value={mat.model}
+                                    placeholder='Quantity'
                                     onChange={(e) => handleMaterialChange(index, 'model', e.target.value)}
                                 />
                             </div>
@@ -642,19 +642,22 @@ function UpdateForm({ folderName }) {
                 </div> */}
 
 <div className="form-group">
-                    <label>Team Members:</label>
-                    {['Member 1', 'Member 2', 'Member 3','Member 4'].map((member) => (
-                        <div key={member}>
-                            <input
-                                type="checkbox"
-                                value={member}
-                                checked={selectedMembers.includes(member)}
-                                onChange={handleMemberChange}
-                            />
-                            <label>{member}</label>
-                        </div>
-                    ))}
-                </div>
+  <label>Team Members:</label>
+  <div className="members-container">
+    {['Sutharsan', 'Nilaxsan', 'Nitharsan', 'Lojan', 'Thanusan', 'Lavees', 'Dilaxsan', 'Abimansu', 'Tharunsan', 'Sujeevan', 'Piratheepan'].map((member) => (
+      <div className="member-item" key={member}>
+        <input
+          type="checkbox"
+          value={member}
+          checked={selectedMembers.includes(member)}
+          onChange={handleMemberChange}
+        />
+        <label>{member}</label>
+      </div>
+    ))}
+  </div>
+</div>
+
 
                 <div className="form-group">
                     <label htmlFor="startMeterReading">Start Meter Reading:</label>

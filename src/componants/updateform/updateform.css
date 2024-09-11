@@ -28,6 +28,7 @@ form {
 
 .form-group {
   margin-bottom: 15px;
+  border-radius: 20px;
 }
 
 label {
@@ -125,6 +126,20 @@ button:disabled {
 
 
 
+.members-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 10px; /* Space between the columns */
+}
+
+.member-item {
+  display: flex;
+  align-items: center;
+}
+
+.member-item label {
+  margin-left: 5px;
+}
 
 
 
