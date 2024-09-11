@@ -222,17 +222,6 @@ function UploadForm() {
                 <div>
                     <label>Team Members:</label>
                     <div className="team-member-checkboxes">
-                        {/* {memberOptions.map((member) => (
-                            <div key={member.name} className="team-member-checkbox">
-                                <input
-                                    type="checkbox"
-                                    value={member.name}
-                                    checked={selectedMembers.includes(member.name)}
-                                    onChange={handleMemberChange}
-                                />
-                                <label title={member.trick}>{member.name}</label>
-                            </div>
-                        ))} */}
                       <div className="members-container">
     {['Sutharsan', 'Nilaxsan', 'Nitharsan', 'Lojan', 'Thanusan', 'Lavees', 'Dilaxsan', 'Abimansu', 'Tharunsan', 'Sujeevan', 'Piratheepan'].map((member) => (
       <div className="member-item" key={member}>
